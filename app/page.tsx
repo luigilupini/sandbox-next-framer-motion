@@ -21,9 +21,9 @@ export default function Home() {
   }, {});
 
   return (
-    <main className='w-full h-full max-w-5xl gap-4 mx-auto overflow-hidden'>
-      <h1 className='w-full mb-16 text-2xl font-bold text-white text-end'>
-        Framer Motion
+    <main className='grid place-content-center w-full h-full overflow-hidden px-2'>
+      <h1 className='absolute text-2xl font-bold px-2 text-gray-900 top-5 right-2 bg-yellow-500 rounded-full'>
+        Animation Sandbox
       </h1>
       <section>
         {Object.entries(folderGroups).map(([prefix, groupFolders]) => (

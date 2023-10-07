@@ -1,6 +1,3 @@
-//@ts-nocheck
-'use client';
-
 import React from 'react';
 import CoinSorter from './CoinSorter';
 

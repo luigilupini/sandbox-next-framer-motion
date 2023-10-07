@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/gsap": "^3.0.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
@@ -16,9 +17,10 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "framer-motion": "^10.16.1",
+    "gsap": "^3.12.2",
     "lodash": "^4.17.21",
     "lodash.range": "^3.2.0",
-    "next": "^13.4.12",
+    "next": "^13.5.2",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
