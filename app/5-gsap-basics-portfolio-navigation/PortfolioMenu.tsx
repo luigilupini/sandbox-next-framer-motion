@@ -16,8 +16,8 @@ export default function SidebarMenu() {
           defaults: { duration: 0.5, ease: 'power3.inOut' },
         });
 
-        const headingStart = link?.querySelector('.primary')!;
-        const headingEnd = link?.querySelector('.secondary')!;
+        const headingStart = link?.querySelector('.headingStart')!;
+        const headingEnd = link?.querySelector('.headingEnd')!;
         const date = link?.querySelector('.date')!;
         const line = link?.querySelector('.line')!;
 
@@ -37,7 +37,7 @@ export default function SidebarMenu() {
 
   return (
     <main className='flex place-items-center h-full w-full bg-gray-900'>
-      <ul className='relative w-full max-w-2xl mr-auto rounded-r-lg shadow-md px-2 py-4 bg-gray-950'>
+      <ul className='relative w-[600px] mr-auto rounded-r-lg shadow-md px-2 py-4 bg-gray-950'>
         <h1 className='absolute -top-3 -right-3 px-2 bg-yellow-500 text-gray-900 shadow-md rounded-full font-bold text-sm'>
           Europe FIA Formula 1 Schedule
         </h1>
@@ -71,13 +71,9 @@ function LineItem({ ctxRef, number, headingStart, headingEnd, date }: any) {
         }}
         className='relative flex justify-between items-center overflow-hidden'
       >
-        <div className='heading-container h-11 ml-12'>
-          <p className='primary text-gray-300 text-[clamp(1rem,2vw,4rem)]'>
-            {headingStart}
-          </p>
-          <p className='secondary text-yellow-500 text-[clamp(1rem,2vw,4rem)]'>
-            {headingEnd}
-          </p>
+        <div className='heading-container h-9 ml-12'>
+          <p className='headingStart text-gray-300 text-2xl'>{headingStart}</p>
+          <p className='headingEnd text-yellow-500 text-2xl'>{headingEnd}</p>
         </div>
 
         <p className='date text-yellow-500 translate-y-[170%] uppercase'>

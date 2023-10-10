@@ -1,6 +1,7 @@
 'use client';
 
 import gsap from 'gsap';
+import Image from 'next/image';
 import { useLayoutEffect, useRef } from 'react';
 import { X } from 'react-feather';
 
@@ -66,30 +67,40 @@ export default function Headline() {
       ref={root}
       className='w-full h-full flex justify-center items-center'
     >
-      <article
-        className='relative flex flex-col items-start justify-start bg-gray-400/5 py-4 px-8 rounded-xl shadow-md cursor-pointer'
-        onMouseEnter={ctx.onMouseEnter}
-        onMouseLeave={ctx.onMouseLeave}
-      >
-        <ul className='list-none flex gap-4 uppercase tracking-[0.2em] text-[0.7em] m-0 p-0'>
-          <li className='relative overflow-hidden'>
-            <span className='opacity-0 text-gray-600'>Science</span>
-            <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-500 shadow rounded-[1px]'></div>
-          </li>
-          <li className='relative overflow-hidden'>
-            <span className='opacity-0 text-gray-600'>Tech</span>
-            <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-500 shadow rounded-[1px]'></div>
-          </li>
-          <li className='relative overflow-hidden'>
-            <span className='opacity-0 text-gray-600'>Latest</span>
-            <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-500 shadow rounded-[1px]'></div>
-          </li>
-        </ul>
-        <h1 className='text-[2rem] font-normal mt-[0.1em] pointer-events-none'>
-          Hover over card
-        </h1>
-        <X className='w-6 h-6 text-gray-600 absolute top-2 right-2' />
-      </article>
+      <div className='flex gap-2 items-center rounded-xl shadow-md cursor-pointer bg-white/80 border overflow-hidden'>
+        <Image
+          src='/airlines.svg'
+          height={100}
+          width={100}
+          alt='logo'
+          className='h-[62px] w-[62px] object-cover ml-2 p-1'
+        />
+        <article
+          className='relative flex flex-col items-start justify-start gap-1 bg-white/5 py-3 px-3 cursor-pointer border-l border-red-900'
+          onMouseEnter={ctx.onMouseEnter}
+          onMouseLeave={ctx.onMouseLeave}
+        >
+          <ul className='list-none flex gap-2 uppercase tracking-[0.2rem] text-[0.7rem] ml-[2px] m-0 p-0'>
+            <li className='relative overflow-hidden'>
+              <span className='opacity-0 text-gray-800'>Milano (MXP)</span>
+              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-400 shadow rounded-[1px]'></div>
+            </li>
+            <li className='relative overflow-hidden'>
+              <span className='opacity-0 text-gray-800'>to</span>
+              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-400 shadow rounded-[1px]'></div>
+            </li>
+            <li className='relative overflow-hidden'>
+              <span className='opacity-0 text-gray-800'>London (LHR)</span>
+              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-400 shadow rounded-[1px]'></div>
+            </li>
+          </ul>
+
+          <h1 className='text-3xl pointer-events-none uppercase text-gray-900'>
+            Emirates flight EK573
+          </h1>
+          <X className='w-6 h-6 text-gray-500 absolute top-2 right-2' />
+        </article>
+      </div>
     </section>
   );
 }
