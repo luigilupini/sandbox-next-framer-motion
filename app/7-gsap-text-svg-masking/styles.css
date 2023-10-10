@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gabarito:wght@400;500;600&family=Martian+Mono:wght@200;300;400&family=Poppins:ital,wght@0,400;0,900;1,900&family=Rubik+Mono+One&display=swap');
+
+article {
+	height: 100vh;
+	position: relative;
+}
+
+svg text {
+	font-family: "Rubik Mono One", monospace;
+	font-style: italic;
+}
+
+svg rect {
+	fill: white;
+	-webkit-mask: url(#mask);
+	mask: url(#mask);
+}

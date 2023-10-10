@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Karla } from 'next/font/google';
-import Link from 'next/link';
 import { Home } from 'react-feather';
 import './globals.css';
+import Link from 'next/link';
 
 const karla = Karla({
   subsets: ['latin-ext'],
@@ -34,7 +34,7 @@ export default function RootLayout({
 const HomeLink = () => (
   <Link
     href='/'
-    className='text-gray-200 absolute bottom-2 left-2 flex gap-2 text-sm place-items-center
+    className='text-gray-200 absolute top-[10px] right-2 flex gap-2 text-sm place-items-center
     bg-gray-800 rounded-md px-2 py-1 hover:bg-gray-700'
   >
     <Home className='h-4 w-4' />

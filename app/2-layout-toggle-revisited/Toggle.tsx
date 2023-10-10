@@ -27,7 +27,7 @@ export default function Toggle({ value, onChange, ...delegated }: Props) {
         // So you can change the width here, layout will transform accordingly
         display: 'flex',
         justifyContent: value ? 'flex-end' : 'flex-start',
-        width: '70px',
+        width: '50%',
       }}
     >
       <motion.span
