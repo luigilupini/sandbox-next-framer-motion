@@ -53,7 +53,13 @@ export default function TextReveal() {
       <section className='relative h-screen w-screen grid place-content-center text-lg font-light'>
         hero area (scroll down)
         <header className='absolute top-10 left-8 flex flex-col items-center justify-center'>
-          <Image src='/netflix-logo.svg' height={150} width={150} alt='logo' />
+          <Image
+            src='/netflix-logo.svg'
+            height={150}
+            width={150}
+            alt='logo'
+            priority
+          />
           <h1 className='text-gray-900 text-sm'>Drive to Survive</h1>
         </header>
       </section>

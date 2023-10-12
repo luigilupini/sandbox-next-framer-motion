@@ -1,11 +1,6 @@
 //@ts-nocheck
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { X } from 'react-feather';
-
 function BookGrid({ books, handleSelectBook, ...delegated }) {
   return (
     <section {...delegated}>

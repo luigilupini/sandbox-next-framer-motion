@@ -76,6 +76,7 @@ export default function Headline() {
           width={100}
           alt='logo'
           className='h-[62px] w-[62px] object-cover ml-2 p-1'
+          priority
         />
         <article
           className='relative flex flex-col items-start justify-start gap-1 py-3 px-3 cursor-pointer border-l border-red-900/30'

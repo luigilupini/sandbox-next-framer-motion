@@ -17,5 +17,6 @@ module.exports = {
   plugins: [
     require('tailwindcss-debug-screens'),
     require('tailwindcss-brand-colors'),
+    require('tailwind-scrollbar-hide'),
   ],
 };

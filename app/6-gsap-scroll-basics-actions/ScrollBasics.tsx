@@ -63,7 +63,7 @@ export default function ScrollBasics() {
           height={100}
           width={100}
           alt='logo'
-          className=''
+          priority
         />
         <h1 className='text-xl font-bold'>LACOSTE</h1>
       </header>

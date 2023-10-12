@@ -54,6 +54,7 @@ export default function Toasty() {
           height={100}
           alt='Toasty'
           className='w-full h-full shadow-sm yellow ball'
+          priority
         />
       </motion.div>
     </div>

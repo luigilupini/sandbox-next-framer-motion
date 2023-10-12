@@ -88,7 +88,13 @@ export default function ScrollScrub() {
   return (
     <section ref={root} className='w-full h-full text-white'>
       <header className='absolute top-2 left-2 flex gap-2 items-center justify-center'>
-        <Image src='/adidas-logo.png' height={150} width={150} alt='logo' />
+        <Image
+          src='/adidas-logo.png'
+          height={150}
+          width={150}
+          alt='logo'
+          priority
+        />
       </header>
       <section className='whitespace h-screen w-screen grid place-content-center text-lg font-light'>
         hero area (scroll down)

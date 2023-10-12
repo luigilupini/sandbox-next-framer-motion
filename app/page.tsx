@@ -21,7 +21,7 @@ export default function Home() {
   }, {});
 
   return (
-    <main className='grid place-content-center w-full h-full overflow-hidden px-2'>
+    <main className='grid place-content-center w-full h-full overflow-x-hidden px-2'>
       <h1 className='absolute text-xl font-bold px-2 text-gray-900 top-2 left-2 bg-yellow-500 rounded-full'>
         Animation Sandbox
       </h1>

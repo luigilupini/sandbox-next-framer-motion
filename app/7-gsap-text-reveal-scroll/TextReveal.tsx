@@ -88,6 +88,7 @@ export default function TextReveal() {
           height={800}
           alt='supporting image'
           className='art absolute w-[30vw] object-cover rounded-[2px] z-[-1] -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 drop-shadow-lg'
+          priority
         />
       </section>
       <section className='relative grid place-content-center mx-48 h-screen'>
@@ -104,6 +105,7 @@ export default function TextReveal() {
           height={800}
           alt='supporting image'
           className='art absolute w-[30vw] object-cover rounded-[2px] z-[-1] -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 drop-shadow-lg'
+          priority
         />
       </section>
       <section className='relative grid place-content-center mx-48 h-screen'>
@@ -120,6 +122,7 @@ export default function TextReveal() {
           height={800}
           alt='supporting image'
           className='art absolute w-[30vw] object-cover rounded-[2px] z-[-1] -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 drop-shadow-lg'
+          priority
         />
       </section>
     </section>

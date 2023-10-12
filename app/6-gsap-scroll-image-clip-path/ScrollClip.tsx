@@ -104,6 +104,7 @@ export default function ScrollClip() {
                 height={400}
                 alt='Syntholtic'
                 className='art w-full object-cover rounded-[2px]'
+                priority
               />
 
               <div className='border mt-2 h-px origin-left border-gray-900/60'></div>
@@ -122,6 +123,7 @@ export default function ScrollClip() {
                 height={400}
                 alt='Bumblebee'
                 className='art w-full object-cover rounded-[2px]'
+                priority
               />
 
               <div className='border mt-2 h-px origin-left border-gray-900/60'></div>
@@ -140,6 +142,7 @@ export default function ScrollClip() {
                 height={400}
                 alt='Smorg'
                 className='art w-full object-cover rounded-[2px]'
+                priority
               />
 
               <div className='border mt-2 h-px origin-left border-gray-900/60'></div>
@@ -158,6 +161,7 @@ export default function ScrollClip() {
                 height={400}
                 alt='Violeta'
                 className='art w-full object-cover rounded-[2px]'
+                priority
               />
               <div className='border mt-2 h-px origin-left border-gray-900/60'></div>
 
