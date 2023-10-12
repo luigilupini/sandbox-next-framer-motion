@@ -2,15 +2,16 @@
 
 import gsap from 'gsap';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { X } from 'react-feather';
 
-// import './styles.css';
-
 export default function Headline() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
   const root = useRef<HTMLElement>(null);
 
   let ctx = gsap.context((self) => {
+    if (hasAnimated) return;
     let timeline = gsap.timeline();
     // In GSAP, a Timeline is used to create sequences of animations that can be
     // controlled as a whole. When using a timeline, you can arrange tweens in a
@@ -19,7 +20,7 @@ export default function Headline() {
       timeline
         .to('div.reveal', {
           scaleX: 1,
-          duration: 0.2,
+          // duration: 0.2,
           stagger: 0.2,
           transformOrigin: 'left',
         })
@@ -27,40 +28,21 @@ export default function Headline() {
           'span',
           {
             opacity: 1,
-            duration: 0.2,
+            // duration: 0.2,
             stagger: 0.2,
           },
           '-=0.3'
         ) // This will make the two animations happen simultaneously
-        .to('div.reveal', {
-          transformOrigin: 'right',
-          scaleX: 0,
-          delay: 0.3, // This delay gives the appearance effect before hiding again
-        });
-    });
-
-    self.add('onMouseLeave', () => {
-      timeline
-        .to('div.reveal', {
-          scaleX: 1,
-          duration: 0.3,
-          stagger: 0.2,
-          transformOrigin: 'right',
-        })
         .to(
-          'span',
+          'div.reveal',
           {
-            opacity: 0,
-            duration: 0.3,
-            stagger: 0.2,
+            transformOrigin: 'right',
+            scaleX: 0,
+            // delay: 0.3, // This delay gives the appearance effect before hiding again
           },
-          '-=0.3'
-        ) // This will make the two animations happen simultaneously
-        .to('div.reveal', {
-          transformOrigin: 'left',
-          scaleX: 0,
-          delay: 0.3, // This delay gives the disappearance effect after showing
-        });
+          '-=5'
+        );
+      setHasAnimated(true);
     });
   }, root.current?.parentNode!); // <- IMPORTANT! scopes selector
 
@@ -69,7 +51,7 @@ export default function Headline() {
       ref={root}
       className='w-full h-full flex justify-center items-center bg-white'
     >
-      <div className='flex gap-2 items-center rounded-xl shadow-md cursor-pointer bg-red-500/5 border border-red-500 overflow-hidden'>
+      <div className='flex gap-2 items-center rounded-xl shadow-md cursor-pointer bg-red-500/5 border-[0.8px] border-red-500 transform-gpu overflow-hidden hover:shadow-lg duration-300 transition-all ease-in-out'>
         <Image
           src='/airlines.svg'
           height={100}
@@ -81,24 +63,23 @@ export default function Headline() {
         <article
           className='relative flex flex-col items-start justify-start gap-1 py-3 px-3 cursor-pointer border-l border-red-900/30'
           onMouseEnter={ctx.onMouseEnter}
-          onMouseLeave={ctx.onMouseLeave}
         >
           <ul className='list-none flex gap-2 uppercase tracking-[0.2rem] text-[0.7rem] ml-[2px] m-0 p-0'>
             <li className='relative overflow-hidden'>
               <span className='opacity-0 text-gray-700'>Milano (MXP)</span>
-              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-300 rounded-[1px] shadow'></div>
+              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-red-200 rounded-[1px] shadow'></div>
             </li>
             <li className='relative overflow-hidden'>
               <span className='opacity-0 text-gray-700'>to</span>
-              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-300 rounded-[1px] shadow'></div>
+              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-red-200 rounded-[1px] shadow'></div>
             </li>
             <li className='relative overflow-hidden'>
               <span className='opacity-0 text-gray-700'>London (LHR)</span>
-              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-gray-300 rounded-[1px] shadow'></div>
+              <div className='reveal absolute w-full h-full origin-left scale-x-0 left-0 top-0 bg-red-200 rounded-[1px] shadow'></div>
             </li>
           </ul>
 
-          <h1 className='text-[27px] pointer-events-none uppercase text-gray-900'>
+          <h1 className='text-[27px] pointer-events-none uppercase text-red-950'>
             Emirates flight EK573
           </h1>
           <X className='w-6 h-6 text-red-300 absolute top-2 right-2' />
