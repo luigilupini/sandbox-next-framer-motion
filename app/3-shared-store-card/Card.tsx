@@ -21,7 +21,7 @@ export default function AnimatedCard() {
 
   return (
     <MotionConfig>
-      <div className="cards-wrapper">
+      <div className="bg-gray-300 cards-wrapper">
         {CARDS.map((card) => (
           <Card key={card.title} card={card} setActiveCard={setActiveCard} />
         ))}
